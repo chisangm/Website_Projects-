@@ -1,0 +1,113 @@
+<?php
+
+/* Start Session */
+if(!isset($_SESSION))
+{
+session_start();
+}
+
+
+/* generate_template_beginning: prints the html page up to the beginning of the content area
+Input: 
+				$pagename examples:home, textbooksearch, messaging, inventory, contact, login) depending on what 
+										page the HTML is for
+				$stylesheet_filename: the name of the .css file that has rules which are specific to
+															the page. It Assumes the css files is located in the CSS folder.
+*/
+function generate_template_beginning($pagename, $stylesheet_filename)
+{
+
+/* Get which nav bar item should be highlighted */
+$home = "";
+$textbooksearch = "";
+$messaging = "";
+$inventory = "";
+$contact = "";
+$login = "";
+
+
+/* Bold the current page's nav bar item */
+if($pagename == 'home')
+	$home = 'id="current"';
+elseif($pagename =='textbooksearch')
+	$textbooksearch = 'id="current"';
+elseif($pagename =='messaging')
+	$messaging = 'id="current"';
+elseif($pagename =='inventory')
+	$inventory = 'id="current"';
+elseif($pagename =='contact')
+	$contact = 'id="current"';
+elseif($pagename =="login")
+	$login = 'id="current"';
+
+
+echo <<<ZZEOF
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Salamander Textbook Exchange </title>
+	<link rel="stylesheet" type="text/css" href="css/template.css" />
+	<link rel="stylesheet" type="text/css" href="css/$stylesheet_filename" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+
+</head>
+
+<body>
+<div id="maincontain">
+
+	<!-- Banner Image -->
+	<div id="banner"><img src="images/logo.jpg" alt="Pulpit rock" id="banner"></div>
+
+	<!-- Navigation Bar -->
+	<div id="navbar">
+		<ul>
+		 <li class="first" >
+		 		<a href="index.php" $home>Home</a>
+		 </li>
+		 <li>
+		 		<a href="search.php" $textbooksearch>Textbook Search</a>
+		 </li>
+		 <li>
+		 		<a href="messages.php" $messaging>Messaging/Inbox</a>
+		 </li>
+		 <li>
+		 		<a href="inventory.php" $inventory>Inventory</a>
+		 </li>
+		 <li>
+		 		<a href="contact.php" $contact>Contact Us</a>
+		 </li>
+		 <li>
+		 		<a href="login.php $login" $login>Login</a>
+		 </li>
+		</ul>
+	</div>
+
+		<!-- Content area start-->
+		<div id="contentarea">
+ZZEOF;
+
+}
+
+
+/* generate_template_end: prints the html code from the end of the content area to the end of the html file */
+function generate_template_end()
+{
+echo <<<ZZEOF
+
+	</div><!-- Content area end -->
+
+
+	<!-- Footer -->
+	<div id="footer">&copy; 2013 Team Salamander. All Rights Reserved.</div>
+
+</div> <!-- Main Contain -->
+
+</html>
+</body>
+ZZEOF;
+}
+
+?>

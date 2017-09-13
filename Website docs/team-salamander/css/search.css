@@ -1,0 +1,117 @@
+/* The "Search for a textbook" header */
+#searcharea h3
+{
+  background-color:#DBE075;
+}
+
+/* The textbook search form */
+#searcharea form
+{
+  margin:10px;
+}
+
+/* The "RESULTS" header */
+#results_title
+{
+  background-color:#DBE075;
+}
+
+/* The results <table> */
+#result_table
+{
+  margin-top:10px;
+  border-collapse:collapse;
+  width:100%;
+}
+
+/* Results table cells */
+#result_table td
+{
+  overflow:hidden;
+  border:1px solid black;
+  margin:0px;
+  padding: 3px;
+  -ms-word-break: break-all;
+  word-break: break-all;
+ /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Links inside the table (there are none but chrome auto generates them) */
+#result_table a
+{
+  text-decoration:none;
+  color:black;
+}
+
+/* Result table's top row */
+#tbltitlebar
+{
+  font-weight:bold;
+}
+
+/* Result table's top row's cells */
+#tbltitlebar td
+{
+  background-color:#AAAAAA;
+  padding:0px; 
+  padding-left:3px;
+}
+
+/* Radio button table cells */
+#result_table .radiocell
+{
+  width:20px;
+}
+
+/* ISBN column */
+#result_table .tblisbn
+{
+  width:120px;
+}
+
+/* Author column */
+#result_table .tblauthor
+{
+  width:100px;
+}
+
+/* Seller email column */
+#result_table .tblseller_email
+{
+  width:150px;
+}
+
+/* Description column */
+#result_table .tbldesc
+{
+  width:130px;
+}
+
+/* Price column */
+#result_table .tblprice
+{
+  width:80px;
+}
+
+/* Purchase buttons */
+.submit
+{
+  float:right;
+}
+
+/* The guest email input text box */
+#guest_email
+{
+  float:right;
+}
+
+/* The Page number <p> */
+#pagenumber
+{
+  font-weight:bold;
+  text-align:center;
+}

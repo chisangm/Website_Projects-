@@ -1,0 +1,1 @@
+Copy this folder to the directory above the "team-salamander" directory and edit the file's username, password and database name to match your database's attributes.

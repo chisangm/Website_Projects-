@@ -1,0 +1,11 @@
+
+#contentarea h1{
+  width:66%;
+  margin:0;
+  background-color:#DBE075;
+}
+
+#contentarea h3, h4{
+  margin:0;
+  padding:0;
+}

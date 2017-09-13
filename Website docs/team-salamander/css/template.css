@@ -1,0 +1,92 @@
+/* Body */
+body{
+  background-color:#555555;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;  
+}
+
+/* Div containing all content*/
+#maincontain{
+  width:900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top:30px;
+}
+
+
+/* Banner image */
+#banner{
+  width:900px;
+  height:150px;
+}
+
+
+/* Navigate Menu*/
+#navbar {
+  background-color: #232323;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  margin:0 auto;
+  text-align: center;
+}
+#navbar ul {
+  margin: 0;
+  padding: 0;
+  
+}
+#navbar ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+  margin-left: 10px;
+  display:inline;
+  border-right:1px solid white;
+}
+.first
+{
+border-left:1px solid white;
+
+}
+#navbar ul li a {
+  color: #83D17B;
+  font-size: 12pt;
+  line-height: 40px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+#navbar ul li #current{
+  color:#DBE075;
+  font-weight:bold;
+}
+#navbar  ul  li  a:hover{
+  color: #ffffff;
+}
+
+
+#displayname
+{
+  color:#aaaaaa;
+}
+
+/* Content Area */
+#contentarea{
+  background-color:#eeeeee;
+  text-align:left;
+  min-height:550px;
+  line-height:1.8em;
+  padding:20px;
+  margin-top:10px;
+}
+
+
+
+
+/* Footer */
+#footer {
+background-color: #232323;
+
+color: #83D17B;
+font-family: Verdana, 'Lucida Grande';
+padding: 15px 20px;
+
+}
